@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Product feedback app solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Product feedback app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-feedback-app-wbvUYqjR6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+- [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### The challenge
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Users should be able to:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Create, read, update, and delete product feedback requests
+- Receive form validations when trying to create/edit feedback requests
+- Sort suggestions by most/least upvotes and most/least comments
+- Filter suggestions by category
+- Add comments and replies to a product feedback request
+- Upvote product feedback requests
+- **Bonus**: Keep track of any changes, even after refreshing the browser (`localStorage` could be used for this if you're not building out a full-stack app)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: https://github.com/amjadsh97/product-feedback-app
+- Live Site URL: https://product-feedback-app-ruby.vercel.app/
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS
+- Flexbox
+- Typescript
+- [React](https://reactjs.org/) - JS library
+
+
+### What I Learned
+I learn a new skills for state management.
+
+### Continued Development
+I plan to develop a more complex state management to improve my skills.
+
+### Useful resources
+- [React Docs](https://react.dev/) - This helped me for building react components. I really liked using this docs.
+
+
+## Author
+
+- Website - [Amjad Shadid](https://amjadshadid.com)
+- Frontend Mentor - [@amjadsh97](https://www.frontendmentor.io/profile/amjadsh97)
+- Twitter - [@Amjadshadid](https://twitter.com/Amjadshadid)
+- Linkedin - [@Amjad Shadid](https://www.linkedin.com/in/amjad-shadid-134355134/)
