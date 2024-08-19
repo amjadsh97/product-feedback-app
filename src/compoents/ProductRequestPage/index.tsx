@@ -144,7 +144,7 @@ function ProductRequestPage() {
   return (
     <div className='product-request-page'>
       <div className="buttons">
-        <Button label={"Go back"} bg={""} icon={"../public/assets/shared/icon-arrow-left.svg"}
+        <Button label={"Go back"} bg={""} icon={"../assets/shared/icon-arrow-left.svg"}
                 className='go-back-button' onClick={() => navigate(`/`)}/>
         <Button className='feedback' label={"Edit Feedback"} bg={"var(--vibrant-blue)"}
                 onClick={() => navigate(`/update-product-request/${id}`)}/>

@@ -32,7 +32,7 @@ const Roadmap = () => {
     <div className='roadmap-page'>
       <div className="roadmap-header">
         <div className="roadmap-header__wrapper">
-          <Button label={"Go back"} bg={""} icon={"../public/assets/shared/icon-arrow-left.svg"} className='go-back-button' onClick={() => navigate(`/`)}/>
+          <Button label={"Go back"} bg={""} icon={"../assets/shared/icon-arrow-left.svg"} className='go-back-button' onClick={() => navigate(`/`)}/>
           <h2 className='h2-style'>Roadmap</h2>
         </div>
 

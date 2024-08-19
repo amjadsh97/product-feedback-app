@@ -95,7 +95,7 @@ const UpdateProductRequestPage = () => {
       <div className="buttons">
         <Button onClick={() => {
           navigate("/")
-        }} label={"Go back"} bg={""} icon={"../public/assets/shared/icon-arrow-left.svg"} className='go-back-button'/>
+        }} label={"Go back"} bg={""} icon={"../assets/shared/icon-arrow-left.svg"} className='go-back-button'/>
       </div>
 
       <form className="form" onSubmit={handleSubmit}>
