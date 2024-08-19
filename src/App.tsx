@@ -125,7 +125,7 @@ function App() {
               <SortDropdown sortOption={sortOption} setSortOption={setSortOption}/>
             </div>
             <Button onClick={() => navigate("/create-product-request")} className='add-button' label={"Add Feedback"}
-                    icon={"public/assets/shared/icon-plus.svg"}
+                    icon={"../assets/shared/icon-plus.svg"}
                     bg={"var(--vivid-magenta)"}/>
           </div>
           <div className="suggestions">

@@ -36,7 +36,7 @@ const Roadmap = () => {
           <h2 className='h2-style'>Roadmap</h2>
         </div>
 
-        <Button onClick={() => navigate("/create-product-request")} className='add-button' label={"Add Feedback"} icon={"public/assets/shared/icon-plus.svg"} bg={"var(--vivid-magenta)"}/>
+        <Button onClick={() => navigate("/create-product-request")} className='add-button' label={"Add Feedback"} icon={"../assets/shared/icon-plus.svg"} bg={"var(--vivid-magenta)"}/>
       </div>
 
       {/*the tabs only on mobile*/}
