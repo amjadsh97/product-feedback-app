@@ -22,7 +22,7 @@ const ProductRequest = ({id, title, comments, category, userUpvoted,upvotes, des
 
   return (
     <div onClick={() => navigate(`/productRequest/${id}`)} className='productRequest'>
-      <Button className={`upvote-button ${userUpvoted ? 'upvoted' : ''}`}  label={upvotes} icon={"../public/assets/shared/icon-arrow-up.svg"} onClick={handleUpvoteClick}/>
+      <Button className={`upvote-button ${userUpvoted ? 'upvoted' : ''}`}  label={upvotes} icon={"../assets/shared/icon-arrow-up.svg"} onClick={handleUpvoteClick}/>
       <div className="productRequest-column">
         <h3 className="productRequest-title">{title}</h3>
         <p className="productRequest-description">{description}</p>
