@@ -21,7 +21,7 @@ aside.aside {}
 
 .aside > * + * { margin-top:24px;}
 
-.aside-header {padding: 24px;background: url(public/assets/suggestions/desktop/background-header.png) no-repeat;border-radius: 10px;height: 137px;display: flex;flex-direction: column;justify-content: end;background-size: cover;position: relative;}
+.aside-header {padding: 24px;background: url(../assets/suggestions/desktop/background-header.png) no-repeat;border-radius: 10px;height: 137px;display: flex;flex-direction: column;justify-content: end;background-size: cover;position: relative;}
 
 .aside-header > h2 { color: var(--pure-white);}
 
