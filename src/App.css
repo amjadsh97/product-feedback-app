@@ -124,7 +124,7 @@ p.comment-description { color: var(--soft-lavender); line-height: 1.3; font-weig
 
 .comment-info { flex-grow: 1; width: calc(100% - 72px);}
 
-.comments-section .comment.has-replies::before { content: ""; position: absolute; left: 20px; top: 63px; width: 1px; height: 53%; background: hsl(from var(--soft-lavender) h s l / 0.1);}
+/*.comments-section .comment.has-replies::before { content: ""; position: absolute; left: 20px; top: 63px; width: 1px; height: 53%; background: hsl(from var(--soft-lavender) h s l / 0.1);}*/
 
 .comment.has-replies .comment { border: unset;}
 
@@ -208,6 +208,9 @@ p.comment-description { color: var(--soft-lavender); line-height: 1.3; font-weig
   .nav-mobile {
     display: none;
   }
+  .tabs {
+    display: none;
+  }
 }
 
 
@@ -258,7 +261,7 @@ p.comment-description { color: var(--soft-lavender); line-height: 1.3; font-weig
   .nav-mobile {
     position: fixed;
     inset: 0;
-    width: 60vw;
+    width: 72vw;
     left: unset;
     margin: unset;
     height: 100vh;
@@ -360,5 +363,103 @@ p.comment-description { color: var(--soft-lavender); line-height: 1.3; font-weig
     inset: 0;
     background: rgb(0 0 0 / 50%);
     z-index: 1;
+  }
+  .suggestions {
+    padding: 0 24px;
+  }
+
+  .productRequest {
+    padding: 24px;
+    flex-wrap: wrap;
+  }
+
+  .button.upvote-button {
+    order: 2;
+    flex-direction: row;
+  }
+
+  .comments-count {
+    order: 3;
+  }
+
+  .product-request-page {
+    padding: 24px;
+  }
+
+  .button {
+    padding: 10px 16px;
+  }
+
+  .arrow-wrapper {
+    font-size: 1.4rem;
+  }
+
+  .product-request-page.create-update-page {
+    width: auto;
+  }
+
+  .product-request-page.create-update-page .buttons-form {
+    flex-direction: column;
+  }
+
+  .product-request-page.create-update-page.edit .button.delete {
+    margin: unset;
+  }
+
+  .product-request-page.create-update-page .buttons-form .button {
+    justify-content: center;
+  }
+  .roadmap-page .roadmap-header {
+    padding: 24px;
+    border-radius: unset;
+  }
+  .column.hidden {
+    display: none;
+  }
+
+  .roadmap-page .column {
+    max-width: unset;
+    width: calc(100% - 24px);
+  }
+  .tabs {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid rgb(151 151 151 / 30%);
+  }
+
+
+  .tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: hsl(from var(--deep-indigo) h s l / 0.4);
+  }
+
+  .tab-item.active {
+    color: var(--deep-indigo);
+  }
+
+  .tab-item:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--vivid-magenta-hover);
+    opacity:0;
+    transition:0.2s ease-in;
+  }
+
+  .tab-item.active:after {
+    opacity:1;
+  }
+
+  .roadmap-page .columns-wrapper {
+    justify-content: center;
   }
 }

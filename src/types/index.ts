@@ -19,7 +19,7 @@ export interface IProductRequest {
   upvotes: number;
   status?: string;
   description: string;
-  comments: Comment[];
+  comments?: Comment[];
   userUpvoted?: boolean; // Optional to avoid issues when mapping over initial data
 }
 

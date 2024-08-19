@@ -1,23 +1,7 @@
 import React, {createContext, useState, useEffect, useContext} from 'react';
 import data from "../data.json";
-import {AppContextProps, AppState, IProductRequest} from "../types";
+import {AppContextProps, AppState, IProductRequest, Comment} from "../types";
 // Define the types for your data
-interface User {
-  image: string;
-  name: string;
-  username: string;
-}
-
-interface Comment {
-  id: number;
-  content: string;
-  user: User;
-  replies?: Comment[];
-}
-
-
-
-
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 
@@ -104,6 +88,9 @@ const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Reply to comment
   // Context file
   const replyToComment = (suggestionId: number, commentId: number, reply: Comment) => {
+    if (reply.id === undefined) {
+      throw new Error("Reply must have an ID.");
+    }
     const addReplyToComment = (comments: Comment[]): Comment[] => {
       return comments.map((comment) => {
         if (comment.id === commentId) {
@@ -126,11 +113,11 @@ const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     setState((prevState) => ({
       ...prevState,
-      productRequests: prevState.productRequests.map((productRequest) =>
+      productRequests: prevState.productRequests.map((productRequest:IProductRequest) =>
         productRequest.id === suggestionId
           ? {
             ...productRequest,
-            comments: addReplyToComment(productRequest.comments || []),
+            comments: addReplyToComment(productRequest.comments as Comment[]),
           }
           : productRequest
       ),
@@ -138,6 +125,7 @@ const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
 
+  // @ts-ignore
   return (
     <AppContext.Provider
       value={{

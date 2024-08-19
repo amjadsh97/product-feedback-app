@@ -56,7 +56,7 @@ const CreateProductRequestPage = () => {
       const newProductRequest = {
         id: Date.now(), // Generate a unique ID for the new request
         title: formData.title,
-        category: formData.category,
+        category: formData.category.toLowerCase(),
         description: formData.detail,
         upvotes: 0,
         status: "suggestion", // Set a default status

@@ -2,10 +2,12 @@ import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 import iconComments from "../../../public/assets/shared/icon-comments.svg";
 import { useSuggestions } from "../../context/AppContext.tsx";
+import {useState} from "react";
 
 const Roadmap = () => {
   const navigate = useNavigate();
   const { state } = useSuggestions();
+  const [activeTab, setActiveTab] = useState<string>("suggestion"); // Default to the first tab
 
   // Group feedback items by their status
   const groupedFeedback = state.productRequests.reduce((acc, product) => {
@@ -37,9 +39,22 @@ const Roadmap = () => {
         <Button onClick={() => navigate("/create-product-request")} className='add-button' label={"Add Feedback"} icon={"public/assets/shared/icon-plus.svg"} bg={"var(--vivid-magenta)"}/>
       </div>
 
+      {/*the tabs only on mobile*/}
+      <div className="tabs">
+        {Object.keys(groupedFeedback).map((status) => (
+          <div
+            key={status}
+            className={`tab-item ${activeTab === status ? "active" : ""}`}
+            onClick={() => setActiveTab(status)}
+          >
+            {statusDetails[status].title}
+          </div>
+        ))}
+      </div>
+
       <div className="columns-wrapper">
         {Object.keys(groupedFeedback).map((status) => (
-          <div className="column" key={status}>
+          <div className={`column ${innerWidth < 768 && activeTab === status ? "active" : "hidden"}`} key={status}>
             <h2 className="roadmap-title h3-style">{statusDetails[status].title}</h2>
             <p className="roadmap-description">{statusDetails[status].description}</p>
             <div className="cards">

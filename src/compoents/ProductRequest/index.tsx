@@ -3,8 +3,7 @@ import Button from "../Button";
 import iconComments from "../../../public/assets/shared/icon-comments.svg";
 // @ts-ignore
 import {IProductRequest} from "../../types";
-import {useContext} from "react";
-import {useSuggestions} from "../../context/AppContext.tsx";
+
 
 
 interface ProductRequestProps extends IProductRequest {
@@ -14,7 +13,6 @@ interface ProductRequestProps extends IProductRequest {
 
 const ProductRequest = ({id, title, comments, category, userUpvoted,upvotes, description, onUpvote}: ProductRequestProps) => {
   const navigate = useNavigate()
-  const { state, replyToComment } = useSuggestions();
 
   const handleUpvoteClick = (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent navigating to the detail page when upvoting

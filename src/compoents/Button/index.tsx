@@ -4,7 +4,7 @@ interface ButtonProps {
   label: string | number;
   className?: string;
   icon?: string;
-  onClick?: () => void;
+  onClick?: (param:any) => void;
   bg?:string;
   type?: any,
 }
