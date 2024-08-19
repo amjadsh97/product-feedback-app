@@ -74,7 +74,7 @@ const CreateProductRequestPage = () => {
   return (
     <div className='product-request-page create-update-page'>
       <div className="buttons">
-        <Button onClick={() => navigate("/")} label={"Go back"} bg={""} icon={"../public/assets/shared/icon-arrow-left.svg"} className='go-back-button'/>
+        <Button onClick={() => navigate("/")} label={"Go back"} bg={""} icon={"../assets/shared/icon-arrow-left.svg"} className='go-back-button'/>
       </div>
 
       <form className="form" onSubmit={handleSubmit}>
