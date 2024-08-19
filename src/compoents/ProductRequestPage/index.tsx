@@ -38,12 +38,15 @@ function ProductRequestPage() {
 
   const handleAddReply = () => {
     if (replyingTo !== null && replyContent.trim()) {
+      // @ts-ignore
+      const replyingToUser = findCommentById(item.comments, replyingTo)?.user.username;
+
       const reply: Comment = {
         id: Date.now(), // Unique ID for the reply
         content: replyContent,
         user: currentUser,
         replies: [],
-        replyingTo: findCommentById(item.comments, replyingTo)?.user.username, // Set replyingTo for nested replies
+        replyingTo: replyingToUser
       };
 
       // @ts-ignore
@@ -161,8 +164,8 @@ function ProductRequestPage() {
       )}
 
       <div className="comments-section">
-        <h3 className='section-title'>{item && item.comments.length} <span>Comments</span></h3>
-        {item && item.comments.map((comment: Comment) => (
+        <h3 className='section-title'>{item.comments && item.comments.length} <span>Comments</span></h3>
+        {item.comments && item.comments.map((comment: Comment) => (
           <>
             <CommentComponent
               id={comment.id}
